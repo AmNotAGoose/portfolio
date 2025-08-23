@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './ContactForm.css';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 
@@ -8,10 +9,18 @@ export default function ContactForm() {
     const [message, setMessage] = useState("");
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (name && email && message) {
-            setSubmitted(true);
+            try {
+                await axios.post('http://localhost:3001/send-message', {
+                    message: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+                });
+                setSubmitted(true);
+            } catch (error) {
+                console.error('Error sending message:', error);
+                alert('Something broke. Try again.');
+            }
         }
     };
 
