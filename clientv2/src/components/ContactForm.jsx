@@ -13,7 +13,7 @@ export default function ContactForm() {
         e.preventDefault();
         if (name && email && message) {
             try {
-                await axios.post('http://localhost:3001/send-message', {
+                await axios.post('http://209.216.121.134:37712/send-message', {
                     message: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
                 });
                 setSubmitted(true);

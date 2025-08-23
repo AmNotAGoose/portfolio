@@ -6,7 +6,10 @@ const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:37711', 'http://127.0.0.1:37711', 'http://209.216.121.134:37711'],
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -44,6 +47,6 @@ app.get('/', (req, res) => {
     });
 });
 
-app.listen(3001, () => {
-    console.log(`Server running`);
+app.listen(37712, () => {
+    console.log(`Server running on port 37712`);
 });
