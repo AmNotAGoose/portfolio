@@ -8,20 +8,29 @@ import Profile from './components/Profile'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Awards from './components/Awards';
 
 import { NavBar } from './components/NavBar'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    document.documentElement.setAttribute('data-theme', newTheme)
+  }
 
   return (
-    <div className='main-container'>
-      <NavBar />
+    <div className='main-container' data-theme={theme}>
+      <NavBar theme={theme} toggleTheme={toggleTheme} />
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/awards" element={<Awards />} />
       </Routes>
     </div>
   )

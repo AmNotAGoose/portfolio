@@ -1,28 +1,41 @@
 :root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --accent-primary: #646cff;
+  --accent-hover: #747bff;
+  --border-color: #dee2e6;
+  --nav-bg: #ffffff;
+  --nav-border: #e9ecef;
+  
+  --bg-primary-dark: #1a1a1a;
+  --bg-secondary-dark: #2d2d2d;
+  --text-primary-dark: #ffffff;
+  --text-secondary-dark: #b0b0b0;
+  --accent-primary-dark: #646cff;
+  --accent-hover-dark: #747bff;
+  --border-color-dark: #404040;
+  --nav-bg-dark: #2d2d2d;
+  --nav-border-dark: #404040;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
   margin: 0;
   display: flex;
   place-items: center;
@@ -33,17 +46,52 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--text-primary);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+button {
+  background-color: var(--bg-secondary);  
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+button:hover {
+  background-color: var(--bg-secondary);
+  color: var(--accent-hover);
+}
+
+[data-theme="dark"] {
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent-primary: var(--accent-primary-dark);
+  --accent-hover: var(--accent-hover-dark);
+  --border-color: var(--border-color-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --nav-border: var(--nav-border-dark);
 }

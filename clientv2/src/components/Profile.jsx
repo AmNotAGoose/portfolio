@@ -1,5 +1,5 @@
 import './Profile.css';
-import pfp from '../assets/pfp.png';
+import pfp from '../assets/pfp.png'; 
 
 const Profile = () => {
     return (

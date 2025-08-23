@@ -17,11 +17,11 @@
 
 .profile h1 {
   margin: 10px 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .profile p {
   max-width: 500px;
   margin-bottom: 10px;
-  color: #555;
+  color: var(--text-secondary);
 }
