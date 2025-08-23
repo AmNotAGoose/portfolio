@@ -10,6 +10,6 @@ My personal portfolio site made for PTC community codes.
 /server: a simple express/http server which has one endpoint: `send-message`
 
 
-Live demo at http://http://209.216.121.134:37711/ !
+Live demo at http://209.216.121.134:37711/ !
 
 I hope you enjoyed my portfolio site!
