@@ -1,0 +1,20 @@
+.about,
+.awards,
+.contact,
+.projects {
+    margin: 30px;
+}
+
+.about h1,
+.awards h1,
+.contact h1,
+.projects h1 {
+    margin-bottom: 20px;
+}
+
+.about p,
+.awards p,
+.contact p,
+.projects p {
+    margin-bottom: 25px;
+}

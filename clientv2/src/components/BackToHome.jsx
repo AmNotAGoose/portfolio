@@ -1,4 +1,3 @@
-import './Contact.css';
 import { useNavigate } from "react-router";
 
 export default function BackToHome() {

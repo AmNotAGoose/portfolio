@@ -1,4 +1,4 @@
-import './Projects.css';
+import './Pages.css';
 import BackToHome from './BackToHome';
 
 export default function Projects() {

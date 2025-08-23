@@ -1,4 +1,4 @@
-import './Awards.css';
+import './Pages.css';
 import BackToHome from './BackToHome';
 import Typography from '@mui/material/Typography';
 
