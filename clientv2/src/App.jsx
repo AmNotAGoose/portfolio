@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import Awards from './components/Awards';
 
 import { NavBar } from './components/NavBar'
+import { FooterBar } from './components/FooterBar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/awards" element={<Awards />} />
       </Routes>
+      <FooterBar />
     </div>
   )
 }

@@ -1,4 +1,3 @@
-// I already did this last time
 import './NavBar.css';
 import EmailIcon from '@mui/icons-material/Email';
 import GithubIcon from '@mui/icons-material/GitHub'; 
@@ -7,7 +6,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 import { useNavigate } from "react-router";
 
-export function NavBar({ theme, toggleTheme }) { // this is the "socials" component mentioned in the point breakdown, its refered to as NavBar since it also handles navigation :D
+export function NavBar({ theme, toggleTheme }) {
     const navigate = useNavigate();
 
     return (
